@@ -43,17 +43,27 @@ def stop_right():
     motor2b.low()
 
 
-def forward_all():
+def forward():
     forward_left()
     forward_right()
 
 
-def backward_all():
+def backward():
     backward_left()
     backward_right()
 
 
-def stop_all():
+def rightward():
+    forward_left()
+    stop_right()
+
+
+def leftward():
+    stop_left()
+    forward_right()
+
+
+def stop():
     stop_left()
     stop_right()
 
@@ -81,5 +91,5 @@ def start_test():
     stop_all()
 
 
-for i in range(2):
-    start_test()
+# for i in range(2):
+#     start_test()
